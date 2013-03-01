@@ -17,7 +17,7 @@ Fri Mar  1 18:53:49 CET 2013
     
 Fri Mar  1 18:53:<b>54</b> CET 2013
 
-OK, that don't make any sense. But what about this:
+OK, that doesn't make any sense. But what about this:
   
 Clear ``pipelight`` buffer
 
