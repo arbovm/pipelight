@@ -69,7 +69,7 @@ And execute it again:
 
 Now it shows, that only ``X-Runtime``, ``Date`` and parts of the ``ETag`` changed.
 
-Let'a try this again using ``Accept-Encoding: gzip`` to force compresssion:
+Let's try this again using ``Accept-Encoding: gzip`` to force compresssion:
 
     curl -Is https://github.com -c cookies.txt -b cookies.txt -H'Accept-Encoding: gzip' | pipelight
     
