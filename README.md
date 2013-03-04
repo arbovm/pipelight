@@ -2,7 +2,6 @@
 
 #### 'cause it shows the difference
 
-
 ### Install
 
     go get github.com/arbovm/pipelight
@@ -17,6 +16,7 @@ Fri Mar  1 18:53:49 CET 2013
     
 Fri Mar  1 18:53:<b>54</b> CET 2013
 
+It highlights the seconds of the date output because they changed since the last time the command was executed.
 OK, that doesn't make any sense. But what about this:
   
 Clear ``pipelight`` buffer
@@ -63,6 +63,9 @@ ETag: "<b>2076</b>6<b>f7927ccf56</b>4<b>3ba845ac381917ab</b>"<br>
 Content-Length: 10925<br>
 
 
+Now it shows, that only ``X-Runtime``, ``Date`` and parts of the ``ETag`` changed.
+
+Let'a try this again using ``Accept-Encoding: gzip`` to force compresssion:
 
     curl -Is https://github.com -c cookies.txt -b cookies.txt -H'Accept-Encoding: gzip' | pipelight
     
@@ -80,10 +83,14 @@ Set-Cookie: _gh_sess=BAh7Bz...d25af3; path=/; expires=Sun, 01-Jan-2023 00:00:00 
 X-Runtime: <b>6</b><br>
 ETag: "<b>de2ca9b0eba7131fdf5de1d6fcb461f4</b>"<br>
 Content-<b>Encoding: gzip</b><br>
- 
- 
+
+And it highlights the new response header ``Content-Encoding`` ( instead of sending ``Content-Length`` ).
+
 ### TODO
- 
- - Find similar lines to provide a better highlighting
+
+
+- Add clear command
+- Make way of highlighting configurable
+- Find similar lines to provide a better highlighting
 
  
