@@ -44,6 +44,8 @@ ETag: "61b566ab19f54e54bf0dcee24a3dac19"<br>
 Content-Length: 10925<br>
 
 
+And execute it again:
+
 
     curl -Is https://github.com -c cookies.txt -b cookies.txt| pipelight
     
@@ -92,5 +94,6 @@ And it highlights the new response header ``Content-Encoding`` ( instead of send
 - Add clear command
 - Make way of highlighting configurable
 - Find similar lines to provide a better highlighting
+- Add option to hide unchanged lines
 
  
