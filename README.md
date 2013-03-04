@@ -93,10 +93,9 @@ And it highlights the new response header ``Content-Encoding`` ( instead of send
 
 ### TODO
 
-
-- [ ] Add clear command
-- [ ] Make way of highlighting configurable
-- [ ] Find similar lines to provide a better highlighting
-- [ ] Add option to hide unchanged lines
+- Add clear command
+- Make way of highlighting configurable
+- Find similar lines to provide a better highlighting
+- Add option to hide unchanged lines
 
  
