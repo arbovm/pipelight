@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	filename := "/tmp/pipelight"
+	filename := fmt.Sprintf("/tmp/pipelight-%v", os.Getppid())
 	file, readError := os.Open(filename)
 	stdinReader     := bufio.NewReader(os.Stdin)
 	reader          := bufio.NewReader(file)
@@ -33,7 +33,9 @@ func main() {
 		}
 		lines.WriteString(line)
 	}
-	file.Close()
+	if readError == nil {
+		file.Close()
+	}
 	ioutil.WriteFile(filename, lines.Bytes(), 0644)
 	
 }
