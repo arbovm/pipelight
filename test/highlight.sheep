@@ -1,0 +1,10 @@
+#!/bin/bash
+# vim: set ft=sh:
+
+source $(dirname $(which $0))/sheep.sh
+
+it "highlights using html" <<-T
+	echo "hello\nworld" | ./pipelight -clear
+	echo "hallo\nworld" | ./pipelight -html | head -1 | grep '<b>a</b>'
+T
+
