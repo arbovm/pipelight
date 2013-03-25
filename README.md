@@ -8,7 +8,7 @@
     
 ### Example
 
-    » date | pipelight
+    » date -clear | pipelight
 
 > Fri Mar  1 18:53:49 CET 2013
 
@@ -20,15 +20,8 @@ It shows the date, awesome. Let's run it again:
 
 It highlights the seconds of the date output because they changed since the last time the command was executed.
 OK, that doesn't make any sense. But what about this:
-  
-Clear ``pipelight`` buffer
-
-    echo -n | pipelight
-
-And then take a look at the following:
-
-                                            
-    curl -Is https://github.com -c cookies.txt -b cookies.txt| pipelight
+                                  
+    curl -Is https://github.com -c cookies.txt -b cookies.txt| pipelight -clear
     
 > HTTP/1.1 200 OK<br>
 > Server: GitHub.com<br>
@@ -93,9 +86,9 @@ And it highlights the new response header ``Content-Encoding`` ( instead of send
 
 ### TODO
 
-- Add clear command
-- Make way of highlighting configurable
-- Find similar lines to provide a better highlighting
-- Add option to hide unchanged lines
+- [x] Add clear command
+- [x] Make way of highlighting configurable
+- [ ] Find similar lines to provide a better highlighting
+- [ ] Add option to hide unchanged lines
 
  
